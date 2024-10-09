@@ -1,0 +1,88 @@
+/* General Reset */
+body, h1, h2, h3, p, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f0; /* Light green background */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px; /* Maximum width for content */
+    margin: 0 auto; /* Centering the container */
+    padding: 20px; /* Padding around the content */
+    background: #ffffff; /* White background for forms and results */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Headings Styles */
+h2 {
+    color: #4CAF50; /* Dark green for headings */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+}
+
+form input[type="text"], 
+form input[type="file"], 
+form input[type="submit"] {
+    padding: 10px; /* Padding for form inputs */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50; /* Green submit button */
+    color: white; /* White text on button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Links Styles */
+a {
+    color: #4CAF50; /* Green color for links */
+    text-decoration: none; /* Remove underline */
+    margin-top: 10px; /* Space above the link */
+    display: inline-block; /* Make the link a block-level element */
+    padding: 10px 15px; /* Padding for the link */
+    border: 1px solid #4CAF50; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+}
+
+a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Result Message Styles */
+.result-container {
+    margin-top: 20px; /* Space above the result container */
+    padding: 15px; /* Padding around the result */
+    border: 1px solid #4CAF50; /* Green border */
+    border-radius: 5px; /* Rounded corners for results */
+    background-color: #e7f4e4; /* Light green background for results */
+}
+
+.result-container p {
+    font-size: 1.2em; /* Slightly larger font for results */
+    color: #333; /* Dark text for contrast */
+}

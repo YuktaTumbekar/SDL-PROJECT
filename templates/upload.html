@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Certificate</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Upload Certificate</h1>
+    <form method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+        
+        <label for="enrollment_no">Enrollment No:</label>
+        <input type="text" name="enrollment_no" required>
+        <br><br>
+        
+        <label for="year">Year:</label>
+        <input type="text" name="year" required>
+        <br><br>
+        
+        <label for="branch">Branch:</label>
+        <input type="text" name="branch" required>
+        <br><br>
+        
+        <label for="course">Course:</label>
+        <input type="text" name="course" required>
+        <br><br>
+
+        <label for="marks">Marks:</label>
+        <input type="number" name="marks" required>
+        <br><br>
+        
+        <label for="certificate">Certificate PDF:</label>
+        <input type="file" name="certificate" accept=".pdf" required>
+        <br><br>
+        
+        <button type="submit">Upload</button>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <p>Return to <a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>
+
+
